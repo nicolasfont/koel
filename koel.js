@@ -1,10 +1,7 @@
 (function(){
-	ko.bindingHandlers.el = {
-			update : function(element, valueAccessor) {
-				var el = ko.unwrap(valueAccessor());
-				
-				element.innerHTML = "";
-				element.appendChild(el);
-			}
-	};
+    ko.bindingHandlers.el = {
+        update: function(element, valueAccessor) {
+            element.appendChild(ko.unwrap(valueAccessor()));
+	}
+    };
 })();
